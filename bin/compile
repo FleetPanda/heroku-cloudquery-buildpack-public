@@ -15,7 +15,8 @@ mv $BUILD_DIR/src/core/config/cloudquery/cloudquery_linux_amd64 $BUILD_DIR/src/c
 chmod +x $BUILD_DIR/src/core/config/cloudquery/cloudquery
 
 echo "-----> Logging in to CloudQuery"
-$BUILD_DIR/src/core/config/cloudquery/cloudquery login --token $CLOUDQUERY_TOKEN
+export CLOUDQUERY_API_KEY=$CLOUDQUERY_API_KEY
+$BUILD_DIR/src/core/config/cloudquery/cloudquery login
 
 echo "-----> Verifying CloudQuery CLI installation"
 if [ -x "$BUILD_DIR/src/core/config/cloudquery/cloudquery" ]; then
