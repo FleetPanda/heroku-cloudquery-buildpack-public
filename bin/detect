@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+echo "cloudquery-buildpack"
+exit 0
